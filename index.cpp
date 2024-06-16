@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -38,15 +37,19 @@ void leituraGrafo(vector<vector<int>> &G, int m)
     while (m--)
     {
         cin >> a >> b;
-        G[a].push_back(b);
-        G[b].push_back(a);
+        G[a].push_back(b); 
     }
 }
 
 bool verificaoVertice(int v, vector<int> &solucao, vector<vector<int>> &G) {
     for (int i : solucao) {
-        for (int vizinho : G[i]) {
+        for (int vizinho : G[i]) { 
             if (vizinho == v) {
+                return false;
+            }
+        }
+        for (int vizinho : G[v]) { 
+            if (vizinho == i) {
                 return false;
             }
         }
