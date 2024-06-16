@@ -3,7 +3,6 @@
 using namespace std;
 
 void leituraGrafo(vector<vector<int>> &, int);
-void escritaGrafo(vector<vector<int>> &);
 vector<int> maiorconjunto(vector<vector<int>> &);
 
 int main()
